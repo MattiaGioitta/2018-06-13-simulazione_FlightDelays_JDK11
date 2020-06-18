@@ -1,6 +1,10 @@
 package it.polito.tdp.flightdelays.db;
 
 import java.sql.Connection;
+import java.util.HashMap;
+import java.util.Map;
+
+import it.polito.tdp.flightdelays.model.Airport;
 
 public class TestDAO {
 
@@ -17,10 +21,12 @@ public class TestDAO {
 		
 
 		FlightDelaysDAO dao = new FlightDelaysDAO();
+		Map<Integer, Airport> map = new HashMap<>();
 
-		System.out.println(dao.loadAllAirlines());
-		System.out.println(dao.loadAllAirports());
-		System.out.println(dao.loadAllFlights());
+		//System.out.println(dao.loadAllAirlines());
+		dao.loadAllAirports(map);
+		System.out.print(dao.getPrimoVolo(map.get(5)));
+		//System.out.println(dao.loadAllFlights());
 	}
 
 }

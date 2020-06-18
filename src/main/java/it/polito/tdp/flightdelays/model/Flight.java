@@ -56,16 +56,16 @@ public class Flight {
 		this.flightNumber = flightNumber;
 	}
 
-	public String getOriginAirportId() {
-		return originAirportId;
+	public Integer getOriginAirportId() {
+		return Integer.parseInt(originAirportId);
 	}
 
 	public void setOriginAirportId(String originAirportId) {
 		this.originAirportId = originAirportId;
 	}
 
-	public String getDestinationAirportId() {
-		return destinationAirportId;
+	public Integer getDestinationAirportId() {
+		return Integer.parseInt(destinationAirportId);
 	}
 
 	public void setDestinationAirportId(String destinationAirportId) {
